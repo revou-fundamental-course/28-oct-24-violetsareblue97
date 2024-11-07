@@ -19,13 +19,13 @@ function calculate(){
     modalText.innerHTML = `Mohon isi setiap kolom!`;
 
   }else{
-    countBmi();
+    Hitung();
   }
 
 }
 
 
-function countBmi(){
+function Hitung(){
   var p = [Umur.value, Tinggi_Badan.value, Berat_Badan.value];
   if(LakiLaki.checked){
     p.push("Laki-Laki");
@@ -35,17 +35,17 @@ function countBmi(){
 
   var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
       
-  var result = '';
+  var Hasil = '';
   if(bmi<18.5){
-    result = 'Underweight';
+    Hasil = 'Underweight';
      }else if(18.5<=bmi&&bmi<=24.9){
-    result = 'Healthy';
+    Hasil = 'Healthy';
      }else if(25<=bmi&&bmi<=29.9){
-    result = 'Overweight';
+    Hasil = 'Overweight';
      }else if(30<=bmi&&bmi<=34.9){
-    result = 'Obese';
+    Hasil = 'Obese';
      }else if(35<=bmi){
-    result = 'Extremely obese';
+    history = 'Extremely obese';
      }
 
 
