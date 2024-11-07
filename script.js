@@ -1,8 +1,8 @@
-var Umur = document.getElementById("Umur");
-var Tinggi_Badan = document.getElementById("Tinggi Badan");
-var Berat_Badan = document.getElementById("Berat Badan");
-var LakiLaki = document.getElementById("L");
-var Perempuan = document.getElementById("P");
+var age = document.getElementById("age");
+var height = document.getElementById("height");
+var weight = document.getElementById("weight");
+var male = document.getElementById("m");
+var female = document.getElementById("f");
 var form = document.getElementById("form");
 let resultArea = document.querySelector(".comment");
 
@@ -14,38 +14,38 @@ var span = document.getElementsByClassName("close")[0];
 
 function calculate(){
  
-  if(Umur.value=='' || Tinggi_Badan.value=='' || Berat_Badan.value=='' || (LakiLaki.checked==false && Perempuan.checked==false)){
+  if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
     modal.style.display = "block";
-    modalText.innerHTML = `Mohon isi setiap kolom!`;
+    modalText.innerHTML = `All fields are required!`;
 
   }else{
-    Hitung();
+    countBmi();
   }
 
 }
 
 
-function Hitung(){
-  var p = [Umur.value, Tinggi_Badan.value, Berat_Badan.value];
-  if(LakiLaki.checked){
-    p.push("Laki-Laki");
-  }else if(Perempuan.checked){
-    p.push("Perempuan");
+function countBmi(){
+  var p = [age.value, height.value, weight.value];
+  if(male.checked){
+    p.push("male");
+  }else if(female.checked){
+    p.push("female");
   }
 
   var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
       
-  var Hasil = '';
+  var result = '';
   if(bmi<18.5){
-    Hasil = 'Underweight';
+    result = 'Underweight';
      }else if(18.5<=bmi&&bmi<=24.9){
-    Hasil = 'Healthy';
+    result = 'Healthy';
      }else if(25<=bmi&&bmi<=29.9){
-    Hasil = 'Overweight';
+    result = 'Overweight';
      }else if(30<=bmi&&bmi<=34.9){
-    Hasil = 'Obese';
+    result = 'Obese';
      }else if(35<=bmi){
-    history = 'Extremely obese';
+    result = 'Extremely obese';
      }
 
 
