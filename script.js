@@ -1,8 +1,8 @@
-var age = document.getElementById("age");
-var height = document.getElementById("height");
-var weight = document.getElementById("weight");
-var male = document.getElementById("m");
-var female = document.getElementById("f");
+var Umur = document.getElementById("Umur");
+var Tinggi_Badan = document.getElementById("Tinggi Badan");
+var Berat_Badan = document.getElementById("Berat Badan");
+var LakiLaki = document.getElementById("L");
+var Perempuan = document.getElementById("P");
 var form = document.getElementById("form");
 let resultArea = document.querySelector(".comment");
 
@@ -14,9 +14,9 @@ var span = document.getElementsByClassName("close")[0];
 
 function calculate(){
  
-  if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
+  if(Umur.value=='' || Tinggi_Badan.value=='' || Berat_Badan.value=='' || (LakiLaki.checked==false && Perempuan.checked==false)){
     modal.style.display = "block";
-    modalText.innerHTML = `All fields are required!`;
+    modalText.innerHTML = `Mohon isi setiap kolom!`;
 
   }else{
     countBmi();
@@ -26,11 +26,11 @@ function calculate(){
 
 
 function countBmi(){
-  var p = [age.value, height.value, weight.value];
-  if(male.checked){
-    p.push("male");
-  }else if(female.checked){
-    p.push("female");
+  var p = [Umur.value, Tinggi_Badan.value, Berat_Badan.value];
+  if(LakiLaki.checked){
+    p.push("Laki-Laki");
+  }else if(Perempuan.checked){
+    p.push("Perempuan");
   }
 
   var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
