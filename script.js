@@ -11,7 +11,7 @@ modalText = document.querySelector("#modalText");
 var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 
-
+/* memrogram penghitungan BMI */
 function calculate(){
  
   if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
@@ -37,35 +37,28 @@ function countBmi(){
       
   var result = '';
   if(bmi<18.5){
-    result = 'Underweight';
+    result = 'Kekurangan Berat Badan';
      }else if(18.5<=bmi&&bmi<=24.9){
-    result = 'Healthy';
+    result = 'Ideal';
      }else if(25<=bmi&&bmi<=29.9){
-    result = 'Overweight';
+    result = 'Kelebihan Berat Badan';
      }else if(30<=bmi&&bmi<=34.9){
-    result = 'Obese';
-     }else if(35<=bmi){
-    result = 'Extremely obese';
+    result = 'Obesitas';
      }
 
-
-
+// menampilkan hasil hitungan
 resultArea.style.display = "block";
-document.querySelector(".comment").innerHTML = `You are <span id="comment">${result}</span>`;
+document.querySelector(".comment").innerHTML = `Anda <span id="comment">${result}</span>`;
 document.querySelector("#result").innerHTML = bmi.toFixed(2);
 
 }
 
-
-
-
-
-// When the user clicks on <span> (x), close the modal
+// ketika pengguna meng-klik tanda 'x', modal ditutup
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// ketika pengguna meng-klik dimana saja, modal ditutup
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";

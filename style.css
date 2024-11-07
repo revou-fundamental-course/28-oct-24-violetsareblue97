@@ -1,10 +1,10 @@
-/* Import Google Font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
     *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     }
     
     body{
@@ -12,70 +12,60 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(97,138,254,0.9);
+    background: #31df8de6;
     }
-/* 
-  .container {
-    min-width: 250px;
-  } */
 
+/*area berbentuk kotak sebagai background kolom-kolom*/    
   .box {
-    width: 500px;
-    background: #fafafa;
-    border-radius: 12px;
+    width: fit-content;
+    background: #31df8de6;
+    border-radius: 0px;
     text-align: center;
-    box-shadow: 2px 2px 20px 5px rgba(0,0,0,0.5);
+
 
   }
 
-
+/*tampilan tulisan judul "Kalkulator BMI"*/
   h1 {
-    color: rgb(0, 0, 0, 0.7);
+    color: #000000;
     font-weight: bold;
     font-size: 36px;
     padding: 30px 0;
     
   }
 
-
-    
-    .content {
-        padding: 0 30px;
-        
-    }
-    
+  /*kolom pengisian umur*/
     .input {
-        background: #fff;
-        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+        background: #31df8de6;
         border-radius: 12px;
         padding: 20px 0;
         margin-bottom: 20px;
     }
-
-    
+/*judul kolom umur*/ 
     .input label {
         display: block;
         font-size: 18px;
         font-weight: 600;
-        color: #000;
+        color: #000000;
         margin-bottom: 20px;
     }
+/*kolom pengisian umur*/
     .input input {
         outline: none;
         border: none;
-        border-bottom: 1px solid #4f7df9;
+        border-bottom: 5px solid #43361ae6;
         width: 50%;
         text-align: center;
         font-size: 28px;
-        font-family: "Nunito", sans-serif;
+        font-family: 'Times New Roman', Times, serif;
     }
 
 
-    
+    /*kolom pengisian bb*/
     .inputW {
-        background: #fff;
+        background: #31df8de6;
         box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
+        border-radius: 0px;
         padding: 10px 0;
         margin-bottom: 20px;
     }
@@ -91,17 +81,18 @@
    .inputW input {
         outline: none;
         border: none;
-        border-bottom: 1px solid #4f7df9;
+        border-bottom: 5px solid #43361ae6;
         width: 50%;
         text-align: center;
         font-size: 28px;
-        font-family: "Nunito", sans-serif;
+        font-family: 'Times New Roman', Times, serif;
     }
 
+    /*kolom pengisian tb*/
     .inputH {
-        background: #fff;
+        background: #31df8de6;
         box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 12px;
+        border-radius: 0px;
         padding: 10px 0;
         margin-bottom: 20px;
         margin-right: 20px;
@@ -118,33 +109,34 @@
    .inputH input {
         outline: none;
         border: none;
-        border-bottom: 1px solid #4f7df9;
+        border-bottom: 5px solid #43361ae6;
         width: 50%;
         text-align: center;
         font-size: 28px;
-        font-family: "Nunito", sans-serif;
+        font-family: 'Times New Roman', Times, serif;
     }
 
-  
+/*tombol hitung BMI*/  
 button.calculate {
     cursor: pointer;
-    font-family: "Nunito", sans-serif;
-    color: #fff;
-    background: rgb(97,138,254,1);
-    font-size: 16px;
-    border-radius: 7px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffffe6;
+    font-weight: bold;
+    background: #1fae6b;
+    font-size: 20px;
+    border-radius: 0px;
     padding: 12px 0;
     width: 100%;
-    outline: none;
+    outline: #000000;
     border: none;
     transition: all 0.5s;
   }
   button.calculate:hover {
-    background: #0044ff;
+    background: #1fae6b;
   }
 
   
-  
+/*tampilan hasil BMI*/
 .result {
     padding: 10px 20px;
   }
@@ -157,7 +149,7 @@ button.calculate {
   .result #result {
     font-size: 36px;
     font-weight: 900;
-    color: #4f7df9;
+    color: #1fae6b;
     background-color: #eaeaea;
     display: inline-block;
     padding: 7px 20px;
@@ -165,8 +157,10 @@ button.calculate {
     margin-bottom: 25px;
   }
   #comment {
-    color: #4f7df9;
+    color: #000000;
     font-weight: 800;
+    font-weight: bold;
+
   }
 
 .comment {
@@ -185,15 +179,15 @@ button.calculate {
 
 .footer-text {
     text-decoration: none;
-    color: rgba(40, 40, 40, 0.8);
-    font-family: 'Poppins', sans-serif;
+    color: #282828cc;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 200;
     font-size: 14px;
     transition: all 0.5;
 }
 
 .footer-text:hover {
-    color: rgba(40, 40, 40, 1);
+    color: #282828;
 }
 
 .gender {
@@ -202,68 +196,68 @@ button.calculate {
     align-items: center;
     align-content: center;
     background: #fff;
-    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
+    box-shadow: 0px 0px 95px -30px #00000026;
+    border-radius: 0px;
     padding: 20px 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-  /* Style for Radio */
+  /* kolom gender */
 .gender .container {
     display: block;
     position: relative;
     padding-left: 35px;
-    /* margin-bottom: 12px; */
+
     margin-top: 7px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 20px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
+}
+
+  /* tombol pilihan gender tidak ditampilkan (selagi belum ada perintah lagi) */
   .gender .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
   }
   
-  /* Create a custom radio button */
+  /* tombol pilihan gender */
   .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #eeeeeee1;
     border-radius: 50%;
   }
   
-  /* On mouse-over, add a grey background color */
+  /* warna tombol gender muncul ketika dikenai/dilewati kursor */
   .gender .container:hover input ~ .checkmark {
     background-color: #ccc;
   }
   
-  /* When the radio button is checked, add a blue background */
+  /* warna tombol gender yang dipilih */
   .gender .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #00ff88;
   }
   
-  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* membuat indikator terisi */
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
   
-  /* Show the indicator (dot/circle) when checked */
+  /* munculkan indikator ketika kolom pilihan diisi */
   .gender .container input:checked ~ .checkmark:after {
     display: block;
   }
   
-  /* Style the indicator (dot/circle) */
+  /* tampilan indikator setelah terisi */
   .gender .container .checkmark:after {
        top: 9px;
       left: 9px;
@@ -271,8 +265,8 @@ button.calculate {
       height: 8px;
       border-radius: 50%;
       background: white;
+      outline: #000000;
   }
-  /* END Style for Radio */
 
 .containerHW {
     display: flex;
@@ -284,12 +278,12 @@ button.calculate {
 
 
 
-/* The Modal (background) */
+/* modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  padding-top: 100px; /* lokasi kotak */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -301,7 +295,6 @@ button.calculate {
 
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
@@ -316,7 +309,7 @@ button.calculate {
   padding-top: 8px;
   padding-right: 5px;
   font-size: 18px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   color: rgb(24, 23, 23);
 }
 
@@ -328,7 +321,7 @@ border: 2px solid red;
   border: 2px solid green;
   }
 
-/* The Close Button */
+/* tombol 'close' saat notifikasi "Mohon isi semua kolom!"*/
 .close {
   color: #aaaaaa;
   float: right;
@@ -342,39 +335,6 @@ border: 2px solid red;
   color: #d41111; 
 }
 
-
-
-
-
-.linkDownload {
-    position: fixed;
-    background-color: #d12322;
-    margin: 20px;
-    padding: 10px 10px;
-    left: -0px;
-    border-radius: 5px;
-    bottom: -0px;
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all 0.43s ease-in-out;
-
-
-  }
-
-  
-.linkDownload i {
-    padding-left: 7px;
-  }
-  
-  .linkDownload:hover {
-    text-decoration: none;
-    background-color: black;
-  }
-  
-
 @media (max-width: 700px){
 
 
@@ -387,16 +347,16 @@ border: 2px solid red;
     
     .input label {
 
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .inputH label, .inputW label {
-        font-size: 14px;
+        font-size: 20px;
     }
 
 
     .input input, .inputH input, .inputW input{
-        font-size: 24px;
+        font-size: 20px;
     }
 
 
@@ -404,7 +364,28 @@ border: 2px solid red;
 
       width: 380px;
     }
-
+    .controls {
+      padding-top: 1rem;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr 2fr;
+      gap: 0.7rem;
+    }
+    
+    label {
+      font-size: 0.8rem;
+      justify-self: end;
+    }
+    
+    input[type='reset'] {
+      width: 5rem;
+      justify-self: end;
+    }
+    
+    input[type='reset'] {
+      grid-column: 2;
+      grid-row: 2;
+    }
 
 
 }
