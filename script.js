@@ -1,66 +1,28 @@
-var age = document.getElementById("age");
-var height = document.getElementById("height");
-var weight = document.getElementById("weight");
-var male = document.getElementById("m");
-var female = document.getElementById("f");
-var form = document.getElementById("form");
-let resultArea = document.querySelector(".comment");
+function calculateBMI() {
+    const weight = document.getElementById("weight").value;
+    const height = document.getElementById("height").value;
 
-modalContent = document.querySelector(".modal-content");
-modalText = document.querySelector("#modalText");
-var modal = document.getElementById("myModal");
-var span = document.getElementsByClassName("close")[0];
+    if (weight === "" || height === "" || weight <= 0 || height <= 0) {
+        alert("Harap masukkan berat dan tinggi badan yang valid!");
+        return;
+    }
 
-/* memrogram penghitungan BMI */
-function calculate(){
- 
-  if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
-    modal.style.display = "block";
-    modalText.innerHTML = `All fields are required!`;
+    const heightInMeters = height / 100;
 
-  }else{
-    countBmi();
-  }
+    const bmi = weight / (heightInMeters * heightInMeters);
 
-}
+    document.getElementById("result").textContent = bmi.toFixed(2);
 
+    let category = "";
+    if (bmi < 18.5) {
+        category = "Kekurangan berat badan";
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        category = "Berat badan normal";
+    } else if (bmi >= 25 && bmi < 29.9) {
+        category = "Kelebihan berat badan";
+    } else {
+        category = "Obesitas";
+    }
 
-function countBmi(){
-  var p = [age.value, height.value, weight.value];
-  if(male.checked){
-    p.push("male");
-  }else if(female.checked){
-    p.push("female");
-  }
-
-  var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
-      
-  var result = '';
-  if(bmi<18.5){
-    result = 'Kekurangan Berat Badan';
-     }else if(18.5<=bmi&&bmi<=24.9){
-    result = 'Ideal';
-     }else if(25<=bmi&&bmi<=29.9){
-    result = 'Kelebihan Berat Badan';
-     }else if(30<=bmi&&bmi<=34.9){
-    result = 'Obesitas';
-     }
-
-// menampilkan hasil hitungan
-resultArea.style.display = "block";
-document.querySelector(".comment").innerHTML = `Anda <span id="comment">${result}</span>`;
-document.querySelector("#result").innerHTML = bmi.toFixed(2);
-
-}
-
-// ketika pengguna meng-klik tanda 'x', modal ditutup
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// ketika pengguna meng-klik dimana saja, modal ditutup
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+    alert("BMI Anda adalah " + bmi.toFixed(2) + " - " + category);
 }
