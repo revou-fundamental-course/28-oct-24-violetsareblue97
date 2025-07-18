@@ -1,391 +1,58 @@
-/*import font*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    }
-    
-    body{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background: #31df8de6;
-    }
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-/*area berbentuk kotak sebagai background kolom-kolom*/    
-  .box {
-    width: fit-content;
-    background: #31df8de6;
-    border-radius: 0px;
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
     text-align: center;
+}
 
+h1 {
+    color: #003366; /* Navy Blue */
+}
 
-  }
+label {
+    font-size: 16px;
+    color: #003366; /* Navy Blue */
+    display: block;
+    margin-top: 10px;
+}
 
-/*tampilan tulisan judul "Kalkulator BMI"*/
-  h1 {
-    color: #000000;
-    font-weight: bold;
-    font-size: 36px;
-    padding: 30px 0;
-    
-  }
-
-  /*kolom pengisian umur*/
-    .input {
-        background: #31df8de6;
-        border-radius: 12px;
-        padding: 20px 0;
-        margin-bottom: 20px;
-    }
-/*judul kolom umur*/ 
-    .input label {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000000;
-        margin-bottom: 20px;
-    }
-/*kolom pengisian umur*/
-    .input input {
-        outline: none;
-        border: none;
-        border-bottom: 5px solid #43361ae6;
-        width: 50%;
-        text-align: center;
-        font-size: 28px;
-        font-family: 'Times New Roman', Times, serif;
-    }
-
-
-    /*kolom pengisian bb*/
-    .inputW {
-        background: #31df8de6;
-        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 0px;
-        padding: 10px 0;
-        margin-bottom: 20px;
-    }
-
-
-    .inputW label {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        margin-bottom: 20px;
-    }
-   .inputW input {
-        outline: none;
-        border: none;
-        border-bottom: 5px solid #43361ae6;
-        width: 50%;
-        text-align: center;
-        font-size: 28px;
-        font-family: 'Times New Roman', Times, serif;
-    }
-
-    /*kolom pengisian tb*/
-    .inputH {
-        background: #31df8de6;
-        box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-        border-radius: 0px;
-        padding: 10px 0;
-        margin-bottom: 20px;
-        margin-right: 20px;
-    }
-
-
-    .inputH label {
-        display: block;
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        margin-bottom: 20px;
-    }
-   .inputH input {
-        outline: none;
-        border: none;
-        border-bottom: 5px solid #43361ae6;
-        width: 50%;
-        text-align: center;
-        font-size: 28px;
-        font-family: 'Times New Roman', Times, serif;
-    }
-
-/*tombol hitung BMI*/  
-button.calculate {
-    cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
-    color: #ffffffe6;
-    font-weight: bold;
-    background: #1fae6b;
-    font-size: 20px;
-    border-radius: 0px;
-    padding: 12px 0;
+input {
     width: 100%;
-    outline: #000000;
-    border: none;
-    transition: all 0.5s;
-  }
-  button.calculate:hover {
-    background: #1fae6b;
-  }
-
-  
-/*tampilan hasil BMI*/
-.result {
-    padding: 10px 20px;
-  }
-  .result p {
-    font-weight: 600;
-    font-size: 22px;
-    color: #000;
-    margin-bottom: 15px;
-  }
-  .result #result {
-    font-size: 36px;
-    font-weight: 900;
-    color: #1fae6b;
-    background-color: #eaeaea;
-    display: inline-block;
-    padding: 7px 20px;
-    border-radius: 55px;
-    margin-bottom: 25px;
-  }
-  #comment {
-    color: #000000;
-    font-weight: 800;
-    font-weight: bold;
-
-  }
-
-.comment {
-    display: none;
-    border: dashed 1px;
-    border-radius: 7px;
-    padding: 5px;
-}
-
-.footer {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 10px 15px
-}
-
-.footer-text {
-    text-decoration: none;
-    color: #282828cc;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 200;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 2px solid #003366; /* Navy Blue */
+    border-radius: 4px;
     font-size: 14px;
-    transition: all 0.5;
 }
 
-.footer-text:hover {
-    color: #282828;
-}
-
-.gender {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    background: #fff;
-    box-shadow: 0px 0px 95px -30px #00000026;
-    border-radius: 0px;
-    padding: 20px 0;
-    margin-bottom: 10px;
-}
-
-  /* kolom gender */
-.gender .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-
-    margin-top: 7px;
+button {
+    background-color: #ffcc00; /* Yellow */
+    color: #003366; /* Navy Blue */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ffb300;
+}
+
+h2 {
     font-size: 20px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-  /* tombol pilihan gender tidak ditampilkan (selagi belum ada perintah lagi) */
-  .gender .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* tombol pilihan gender */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eeeeeee1;
-    border-radius: 50%;
-  }
-  
-  /* warna tombol gender muncul ketika dikenai/dilewati kursor */
-  .gender .container:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* warna tombol gender yang dipilih */
-  .gender .container input:checked ~ .checkmark {
-    background-color: #00ff88;
-  }
-  
-  /* membuat indikator terisi */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* munculkan indikator ketika kolom pilihan diisi */
-  .gender .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* tampilan indikator setelah terisi */
-  .gender .container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-      outline: #000000;
-  }
-
-.containerHW {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-  
-
-
-
-
-/* modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1; 
-  padding-top: 100px; /* lokasi kotak */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 300px;
-
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 600px;
-  border-radius: 10px;
-  box-shadow: #393c76 -1px 2px 2px 1px;
-}
-
-#modalText {
-  padding-top: 8px;
-  padding-right: 5px;
-  font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(24, 23, 23);
-}
-
-.modal-wrong {
-border: 2px solid red;
-}
-
-.modal-correct {
-  border: 2px solid green;
-  }
-
-/* tombol 'close' saat notifikasi "Mohon isi semua kolom!"*/
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.close:hover {
-  color: #d41111; 
-}
-
-@media (max-width: 700px){
-
-
-    .box {
-        width: 380px;
-    }
-
-
-
-    
-    .input label {
-
-        font-size: 20px;
-    }
-
-    .inputH label, .inputW label {
-        font-size: 20px;
-    }
-
-
-    .input input, .inputH input, .inputW input{
-        font-size: 20px;
-    }
-
-
-    .modal-content {
-
-      width: 380px;
-    }
-    .controls {
-      padding-top: 1rem;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: 1fr 2fr;
-      gap: 0.7rem;
-    }
-    
-    label {
-      font-size: 0.8rem;
-      justify-self: end;
-    }
-    
-    input[type='reset'] {
-      width: 5rem;
-      justify-self: end;
-    }
-    
-    input[type='reset'] {
-      grid-column: 2;
-      grid-row: 2;
-    }
-
-
+    color: #003366; /* Navy Blue */
 }
